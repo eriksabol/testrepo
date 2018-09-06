@@ -1,0 +1,31 @@
+<mvc:View
+  controllerName="Project_2.controller.App"
+  xmlns:l="sap.ui.layout"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:core="sap.ui.core"
+  xmlns="sap.m">
+ 
+ <App id="myApp">
+    <pages>
+      <Page title="BI 4.2 REST API - Alfa release" id="myPage">
+        <content>
+          <l:VerticalLayout class="sapUiContentPadding" width="100%">
+            <l:content>
+              <Label text="WACS URL:" labelFor="input-wacs"/>
+              <Input id="input-wacs" required="true" value="http://localhost:6405/biprws"/>
+              <Label text="Username:" labelFor="input-username" value="Administrator" />
+              <Input id="input-username"/>
+              <Label text="Password:" labelFor="input-password"/>
+              <Input id="input-password" type="Password"/>
+              <Label text="Authentication:" labelFor="input-authenticaton"/>
+	            <ComboBox items="{authenticationModel>/items}" selectedKey="secEnterprise" enabled="false" id="input-authentication">
+				        <core:Item key="{authenticationModel>key}" text="{authenticationModel>text}"/>
+			        </ComboBox>
+              <Button id="loginButton" type="Emphasized" text="Login" press="onPressLogin" />
+            </l:content>
+          </l:VerticalLayout>
+        </content>
+      </Page>
+    </pages>
+ </App>
+</mvc:View>
