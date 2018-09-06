@@ -151,6 +151,7 @@ sap.ui.define([
 
             // 1. uloz logonToken na sap local storage
             // 2. naviguj na druhy view/controller kde uz budem vo vnutri (logoff button sa presunie tam).
+            // testujem git
 
         }
 
